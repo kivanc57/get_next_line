@@ -6,13 +6,13 @@
 /*   By: kgordu <kgordu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 16:04:34 by kgordu            #+#    #+#             */
-/*   Updated: 2024/09/01 16:06:55 by kgordu           ###   ########.fr       */
+/*   Updated: 2024/09/01 16:58:02 by kgordu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"	
 
-static char	*function_name(int fd, char *buf, char *backup)
+static char	*read_line_from_file(int fd, char *buf, char *backup)
 {
 	int		read_line;
 	char	*char_temp;
@@ -69,7 +69,7 @@ char	*get_next_line(int fd)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return (0);
-	line = function_name(fd, buf, backup);
+	line = read_line_from_file(fd, buf, backup);
 	free(buf);
 	buf = NULL;
 	if (!line)
