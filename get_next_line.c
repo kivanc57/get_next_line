@@ -6,7 +6,7 @@
 /*   By: kgordu <kgordu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 16:04:34 by kgordu            #+#    #+#             */
-/*   Updated: 2024/09/01 16:58:02 by kgordu           ###   ########.fr       */
+/*   Updated: 2024/09/01 17:02:39 by kgordu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static char	*read_line_from_file(int fd, char *buf, char *backup)
 {
 	int		read_line;
-	char	*char_temp;
+	char	*temp;
 
 	read_line = 1;
 	while (read_line != '\0')
@@ -28,10 +28,10 @@ static char	*read_line_from_file(int fd, char *buf, char *backup)
 		buf[read_line] = '\0';
 		if (!backup)
 			backup = ft_strdup("");
-		char_temp = backup;
-		backup = ft_strjoin(char_temp, buf);
-		free(char_temp);
-		char_temp = NULL;
+		temp = backup;
+		backup = ft_strjoin(temp, buf);
+		free(temp);
+		temp = NULL;
 		if (ft_strchr (buf, '\n'))
 			break ;
 	}
