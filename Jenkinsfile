@@ -6,7 +6,7 @@ pipeline {
   }
 
   parameters {
-    choices(name: 'VERSION', choices: ['1.0.0'], description: 'Select the version')
+    choice(name: 'VERSION', choices: ['1.0.0'], description: 'Select the version')
     booleanParam(name: 'executeTests', defaultValue: false, description: 'Execute tests')
   }
 
