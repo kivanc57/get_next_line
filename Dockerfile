@@ -11,7 +11,6 @@ COPY inc ./inc
 COPY src ./src
 
 # Copy text file
-
 COPY text ./text
 
 # Copy the MakeFile
