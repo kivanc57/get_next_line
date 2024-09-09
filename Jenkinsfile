@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_TOKEN = credentials('dockerhub-token')
+    DOCKERHUB_CREDENTIALS = credentials('docker-credentials')
   }
 
   parameters {
@@ -37,9 +37,9 @@ pipeline {
       steps {
         script {
           // Log in to Docker Hub
-          docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_TOKEN}") {
+          docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_CREDENTIALS}") {
             // Push Docker Image
-            docker.image("kivanc57/get_next_line:latest").push()
+            docker.image("kivanc57/get_next_line:latest").push('latest')
           }
         }
       }
