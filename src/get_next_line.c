@@ -6,11 +6,11 @@
 /*   By: kgordu <kgordu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 16:04:34 by kgordu            #+#    #+#             */
-/*   Updated: 2024/09/01 17:02:39 by kgordu           ###   ########.fr       */
+/*   Updated: 2024/09/09 16:21:21 by kgordu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"	
+#include "../inc/get_next_line.h"	
 
 static char	*read_line_from_file(int fd, char *buf, char *backup)
 {

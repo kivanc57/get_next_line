@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  get_next_line:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - ../src:/usr/src/get_next_line/src
+    - ../inc:/usr/inc/get_next_line/inc
+    command: ./get_next_line

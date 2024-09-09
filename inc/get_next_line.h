@@ -6,7 +6,7 @@
 /*   By: kgordu <kgordu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 15:19:28 by kgordu            #+#    #+#             */
-/*   Updated: 2024/09/01 16:14:12 by kgordu           ###   ########.fr       */
+/*   Updated: 2024/09/09 16:27:55 by kgordu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 # endif
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
-
-//#include <stdlib.h> and <unistd.h> for *malloc(), free(), & read()*.
+# include <fcntl.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_strlen(const char *str);

@@ -6,11 +6,11 @@
 /*   By: kgordu <kgordu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 15:22:41 by kgordu            #+#    #+#             */
-/*   Updated: 2024/09/01 15:22:43 by kgordu           ###   ########.fr       */
+/*   Updated: 2024/09/09 16:21:27 by kgordu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../inc/get_next_line.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
