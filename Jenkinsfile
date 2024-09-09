@@ -37,7 +37,7 @@ pipeline {
       steps {
         script {
           // Log in to Docker Hub
-          docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_CREDENTIALS}") {
+          docker.withRegistry('', "${DOCKERHUB_CREDENTIALS}") {
             // Push Docker Image
             docker.image("kivanc57/get_next_line:latest").push('latest')
           }
@@ -54,6 +54,7 @@ pipeline {
       }
     }
   }
+
 
   post {
     success {
